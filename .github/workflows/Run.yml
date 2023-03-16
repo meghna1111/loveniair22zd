@@ -1,0 +1,31 @@
+name: Rewards Action
+
+on:
+  schedule:
+    - cron: '0 0,12 * * *' # schedule it using cron ((:
+  workflow_dispatch:
+
+# I think it's not necessary
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 50 # set it as your choice
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+        cache: 'pip'
+        
+    - name: Install dependencies
+      run: |
+       pip install -r requirements.txt
+
+    - name: Run Script
+      run: python ms_rewards_farmer.py --fast --headless --error --on-finish exit --telegram 5306532338:AAGdpkdqKb84Xtdu1UJUr84Edz6MGTy2HPo -1001688925771
