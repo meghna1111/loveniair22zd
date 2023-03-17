@@ -2,7 +2,7 @@ name: Rewards Action
 
 on:
   schedule:
-    - cron: '0 0,12 * * *' # schedule it using cron ((:
+    - cron: '30 2 * * *' # schedule it using cron ((:
   workflow_dispatch:
 
 # I think it's not necessary
