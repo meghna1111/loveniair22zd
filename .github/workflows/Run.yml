@@ -13,7 +13,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    timeout-minutes: 50 # set it as your choice
+    timeout-minutes: 65 # set it as your choice
 
     steps:
     - uses: actions/checkout@v3
