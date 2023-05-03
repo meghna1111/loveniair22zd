@@ -28,4 +28,4 @@ jobs:
        pip install -r requirements.txt
 
     - name: Run Script
-      run: python ms_rewards_farmer.py --superfast --headless --skip-shopping --no-images --error --on-finish exit --currency INR --telegram 5306532338:AAGdpkdqKb84Xtdu1UJUr84Edz6MGTy2HPo -1001688925771
+      run: python ms_rewards_farmer.py --superfast --headless --skip-shopping --no-images --error --on-finish exit --currency INR --dont-check-internet --telegram 5306532338:AAGdpkdqKb84Xtdu1UJUr84Edz6MGTy2HPo -1001688925771
